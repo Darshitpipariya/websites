@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <h1>User Registration Form </h1>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" id="fname"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="lname"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="" id="email"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="" id="pass"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td><input type="password" name="" id="cpass"></td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td><input type="text" id="mbnumber"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="Gender" id="" value="Male">Male <input type="radio" name="Gender" id=""
+                    value="Female">Female</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>
+                <select name="Country" id="Country">
+                    <option value="INDIA" selected>INDIA</option>
+                    <option value="USA">USA</option>
+                    <option value="GERMANY">GERMANY</option>
+                    <option value="FRANCE">FRANCE</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                <select name="City" id="City">
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" name="" id=""></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td ><input type="button" value="Submit" id="submit"></td>
+        </tr>
+    </table>
+    <script>
+        fname=document.getElementById("fname");
+        password=document.getElementById("pass");
+        confirm_password=document.getElementById("cpass");
+        mobile_number=document.getElementById("mbnumber");
+        document.getElementById("submit").addEventListener("click",go);
+        function go(){
+            if (fname.value.length < 4){
+                alert("name should be more than 4 charecter");
+            }else if(password.value!==confirm_password.value){
+                alert("password doesn't match");
+            }else if(mobile_number.value.length!=10 || !(mobile_number.value[0]==="6" || mobile_number.value[0]==="7" 
+                    || mobile_number.value[0]==="8" || mobile_number.value[0]==="9")
+                    )
+            {
+                alert("invalid mobile number");
+            }
+        }
+    </script>
+</body>
+
+</html>

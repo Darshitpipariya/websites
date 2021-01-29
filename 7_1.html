@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Display Even Number & Sum</h1>
+    <div id='result'></div>
+    <script>
+        function evensum(){
+            var sum=0;
+            for(var i=0; i<=20;i+=2){
+                sum+=i;
+            }
+            return sum
+        }
+        document.getElementById('result').innerHTML="Total:"+evensum().toString();
+    </script>
+</body>
+</html>

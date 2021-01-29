@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic text change</title>
+</head>
+
+<body>
+    <select name="gender" id="gender">
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select>
+    <br>
+    <p>
+        <input type="radio" name="spcies" value="dog">dog
+        <input type="radio" name="spcies" value="cat">cat
+        <input type="radio" name='spcies' value='bird'>bird
+    </p>
+    <p>
+        <input type="checkbox" value='Happy'>Happy
+        <input type="checkbox" value='Sad'>Sad
+        <input type="checkbox" value='Angry'>Angry
+    </p>
+    <p>
+        I love
+        <span id='checkSpan'></span>
+        <span id='genderSpan'></span>
+        <span id='spciesSpan'></span>
+    </p>
+    <script>
+        $("select[name='gender']").change(
+            function () {
+                $('#genderSpan').html($(this).val());
+            }
+        );
+        $("input[type='radio'][name='spcies']").change(
+            function () {
+                if ($(this).prop('checked')) {
+                    $('#spciesSpan').html($(this).val());
+                }
+            }
+        )
+        var allChecked = [];
+        $("input:checkbox").change(
+            function () {
+                var value = $(this).val();
+                if ($(this).prop('checked')) {
+                    allChecked.push(value);
+                } else {
+                    var index = allChecked.indexOf(value);
+                    if (index != -1) {
+                        allChecked.splice(index, 1);
+                    }
+                }
+                $('#checkSpan').html('');
+                allChecked.forEach(function(item){
+                    $('#checkSpan').append(item);
+                    if(allChecked.indexOf(item)< allChecked.length-1){
+                        $('#checkSpan').append(', ');
+                    }else{
+                        $('#checkSpan').append(' ');
+                    }
+
+                })
+                // for (var i = 0; i < allChecked.length; i++) {
+                //     $('#checkSpan').append(allChecked[i]);
+                //     if (i < allChecked.length - 1)
+                //         $('#checkspan').append(', ');
+                //     else
+                //         $('#checkSpan').append(' ');
+                // }
+                console.log(allChecked);
+            }
+        )
+    </script>
+</body>
+
+</html>

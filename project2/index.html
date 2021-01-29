@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calander</title>
+</head>
+
+<body style='font-family: Helvetica;'>
+    <center>
+        <table class='table-borderless' style="table-layout: fixed;width: 100%;padding: 10pt;">
+            <thead>
+                <tr class='month-header'
+                    style="background-image: url('https://www.sapporo.co.uk/wp-content/uploads/2018/08/Christmas-decorations-iStock_000048591732_Small.jpg'); background-position:center center;background-repeat:no-repeat;background-size:cover;height:300px;text-align:right;">
+                    <th colspan="14"
+                        style='font-style: italic;font-size:50px;font: outline; font-variant-caps: petite-caps;text-shadow: 10px;text-align: center; color:rgb(102, 4, 4);'>
+                        December 2020</th>
+                </tr>
+                <tr 
+                    style='border-color:#ddd;border-style:solid;padding:10pt; height:50px;font-size:larger; background-color: rgb(183, 242, 250);font-weight: 700;font-variant: small-caps; text-align: center;color: rgb(104, 97, 97);'>
+                    <th class='shadow rounded-3' colspan="2">sunday</th>
+                    <th  colspan="2">monday</th>
+                    <th class='shadow rounded-3' colspan="2">tuesday</th>
+                    <th colspan="2">wednday</th>
+                    <th class='shadow rounded-3' colspan="2">thrusday</th>
+                    <th colspan="2">friday</th>
+                    <th class='shadow rounded-3' colspan="2">sutarday</th>
+                </tr>
+            </thead>
+            <tbody class='align-top'>
+                <tr style='height:85px;padding: 5pt;' >
+                    <td colspan='4' style="background-color: rgb(190, 189, 189);"></td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)" >1
+                        <ul class='shadow rounded-3 text-capitalize' style=" color:darkslategrey; background-color:floralwhite">
+                            <li>Buy grocery</li>
+                            <li>meeting with collage</li>
+                        </ul>
+                    </td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">2</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">3</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">4</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">5</td>
+                </tr>
+                <tr style='height:85px;'>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">6</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">7</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">8</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">9</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">10</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">11</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">12</td>
+                </tr>
+                <tr style='height:85px;padding: 5pt;'>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">13</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">14</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">15</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">16</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">17</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">18</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">19</td>
+                </tr>
+                <tr style='height:85px;padding: 5pt;'>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">20</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">21</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">22</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">23</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">24</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">25</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">26</td>
+                </tr>
+                <tr style='height:85px;padding: 5pt;'>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">27</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">28</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">29</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">30</td>
+                    <td colspan="2" style="background-color:rgb(219, 218, 218)">31</td>
+                    <td colspan="2" style="background-color: darkgray;"></td>
+                    <td colspan="2" style="background-color: darkgray;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+
+</body>
+
+</html>

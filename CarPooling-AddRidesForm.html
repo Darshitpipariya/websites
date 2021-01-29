@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add ride</title>
+</head>
+<body>
+    <h2><span style="background-color: #000080; color: #ff6600;">Add Rides</span></h2>
+    <table>
+        <tr>
+            <td>From</td>
+            <td><input type="text" id="from"></td>
+        </tr>
+        <tr>
+            <td>To</td>
+            <td><input type="text" id="to"></td>
+        </tr>
+        <tr>
+            <td>Total No Of Seats</td>
+            <td><input type="text" id="rideno"></td>
+        </tr>
+        <tr>
+            <td>Start Date and Time</td>
+            <td><input type="datetime" name="" id="stdate"></td>
+        </tr>
+        <tr>
+            <td>End Date and Time</td>
+            <td><input type="datetime" name="" id="enddate"></td>
+        </tr>
+        <tr>
+            <td>Ride Amount</td>
+            <td><input type="text" id="rideamt"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Submit" id="sub"></td>
+        </tr>
+    </table>
+    
+<script>
+frome=document.getElementById("from");
+toe=document.getElementById("to");
+rideno=document.getElementById("rideno");
+rideamt=document.getElementById("rideamt");
+startdt=document.getElementById("stdate");
+enddt=document.getElementById("enddate");
+frome_val=frome.value;
+toe_val=toe.value;
+rideno_val=rideno.value;
+rideamt_val=rideamt.value;
+startdt_val=startdt.value;
+enddt_val=enddt.value;
+document.getElementById("sub").addEventListener("onclick",sub);
+function valid_From(){
+    if (frome_val.length<3){
+        alert("invalid from value");
+    } 
+}
+function valid_To(){
+if(toe_val.length<3){
+        alert("invalid to value");
+    }
+}
+function validRideNo(){
+    if (parseInt(rideno_val)<=0){
+        alert("invalid ride numbers");
+    }
+}
+function validRideamt() {
+    if (parseInt(rideamt_val)<5){
+        alert("ride amount should be $5");
+    }
+}
+function validDatetime(){
+    var dt=new Date();
+    dt.setHours(dt.getHours()+2);
+    if (dt>startdt_val && dt>enddt_val){
+        alert("invalid start datetime or end datetime");
+    }
+}
+
+function sub(){
+    console.log("hello");
+    valid_From();
+    valid_To();
+    validRideno();
+    validRideamt();
+    validDatetime();
+    
+}
+
+
+</script>
+</body>
+</html>

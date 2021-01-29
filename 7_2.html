@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <!-- <title>Login Page</title> -->
+    <script>
+        function UserLogin() {
+            var username = document.getElementById('n1').value;
+            if (username === 'admin') {
+                document.getElementById('info').innerHTML = 'Valid User';
+            } else {
+                document.getElementById('info').innerHTML = 'Invalid User';
+            }
+        }
+    </script>
+</head>
+
+<body >
+    <form  action="">
+        <h1 align='center'>Login Page</h1>
+        <table align='center'>
+            <tbody>
+                <tr>
+                    <td>
+                        User Name:
+                    </td>
+                    <td>
+                        <input type="text" name='Username' id='n1'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="password" name="userPassword" id="p1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Login" onclick='UserLogin()'>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id='info'></div>
+    </form>
+
+</body>
+
+</html>

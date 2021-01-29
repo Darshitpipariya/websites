@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <ul>
+        <li class="orderdList">dog</li>
+        <li class="orderdList">cat</li>
+        <li class="orderdList">bird</li>
+        <li class="orderdList">cow</li>
+        <li class="orderdList">bell</li>
+    </ul>
+    <ol style='color: rgb(39, 140, 228); background-color: rgb(255, 245, 185); width:100px;height: 50px; border-radius:100px;margin-top: 10px;margin-bottom: 10px;margin-left: 20px;padding:10px'>
+        <li> first item</li>
+        <li> second item</li>
+    </ol>
+    <script>
+        $('li.orderdList').on({
+            mouseenter: function () {
+                $(this).css('color', 'red');
+                $(this).css('font-size', '120%');
+            },
+            mouseleave: function () {
+                $(this).css('color', 'black');
+                $(this).css('font-size', '100%');
+            },
+            click: function () {
+                $(this).css('background-color', 'yellow');
+            }
+        });
+    </script>
+</body>
+
+</html>
